@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ss.com.qqdemo.view.QuickIndexBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quickindexbar"
+    android:layout_width="30dp"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:background="@android:color/darker_gray">
+
+</ss.com.qqdemo.view.QuickIndexBar>

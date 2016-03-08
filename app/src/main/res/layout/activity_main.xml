@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ss.com.qqdemo.drag.DragLayoutActivity xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draglayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ss.com.qqdemo.drag.DragLayoutActivity"
+    android:background="@mipmap/bg">
+
+    <include layout="@layout/activity_drag_leftlayout"></include>
+    <include layout="@layout/main_content_layout"></include>
+
+</ss.com.qqdemo.drag.DragLayoutActivity>

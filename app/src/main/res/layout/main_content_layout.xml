@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ss.com.qqdemo.view.MainContentLineayLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/maincontentlilayout"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#18B6EF">
+        <ImageView
+            android:id="@+id/mainHead"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/head"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="好友列表"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/conversation_title_right_btn_selector"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/mainContentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</ss.com.qqdemo.view.MainContentLineayLayout>

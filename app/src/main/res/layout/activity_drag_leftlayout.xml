@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="50dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/leftHead"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/head"/>
+    <ListView
+        android:id="@+id/leftContentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
