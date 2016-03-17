@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="60dp">
-
-
     <ss.com.qqdemo.view.SwipeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipe_item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="70dp"
+        android:minHeight="70dp">
 
         <LinearLayout
             android:id="@+id/rightll"
@@ -42,15 +39,17 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@mipmap/head_1"
+                android:id="@+id/left_title"
                 android:layout_gravity="center_vertical"/>
             <TextView
+                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
+                android:id="@+id/tv_name"
                 android:text="fewfe"
                 />
 
         </LinearLayout>
 
     </ss.com.qqdemo.view.SwipeLayout>
-</RelativeLayout>

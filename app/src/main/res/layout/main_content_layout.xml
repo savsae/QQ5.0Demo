@@ -29,9 +29,8 @@
             android:layout_centerVertical="true"
             android:src="@drawable/conversation_title_right_btn_selector"/>
     </RelativeLayout>
-    <include layout="@layout/swipe_layout"></include>
-    <!--<ListView
+    <ListView
         android:id="@+id/mainContentList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>-->
+        android:layout_height="match_parent"></ListView>
 </ss.com.qqdemo.view.MainContentLineayLayout>

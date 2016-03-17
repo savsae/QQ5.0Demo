@@ -17,12 +17,12 @@ import android.widget.TextView;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.view.ViewHelper;
 
+import ss.com.qqdemo.adapter.SwipeAdapter;
 import ss.com.qqdemo.drag.DragLayoutActivity;
 import ss.com.qqdemo.friendscircle.FriendsCircleActivity;
 import ss.com.qqdemo.personcontact.PersonContactActivity;
 import ss.com.qqdemo.utils.EvaluateUtils;
 import ss.com.qqdemo.view.MainContentLineayLayout;
-import ss.com.qqdemo.view.SwipeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -89,33 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        SwipeLayout maincontentlilayout = (SwipeLayout) findViewById(R.id.maincontentlilayout);
-        maincontentlilayout.setOnSwipeLayoutStatusListener(new SwipeLayout.OnSwipeLayoutStatusListener() {
+        ListView maincontentlv = (ListView) findViewById(R.id.mainContentList);
+        maincontentlv.setAdapter(new SwipeAdapter(this));
 
-            @Override
-            public void onClose(SwipeLayout swipeLayout) {
-
-            }
-
-            @Override
-            public void onOpen(SwipeLayout swipeLayout) {
-
-            }
-
-            @Override
-            public void onDraging(SwipeLayout swipeLayout) {
-
-            }
-
-            @Override
-            public void onStartClose(SwipeLayout swipeLayout) {
-
-            }
-
-            @Override
-            public void onStartOpen(SwipeLayout swipeLayout) {
-
-            }
-        });
     }
 }
