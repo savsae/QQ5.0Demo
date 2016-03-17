@@ -18,9 +18,11 @@ import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.view.ViewHelper;
 
 import ss.com.qqdemo.drag.DragLayoutActivity;
+import ss.com.qqdemo.friendscircle.FriendsCircleActivity;
 import ss.com.qqdemo.personcontact.PersonContactActivity;
 import ss.com.qqdemo.utils.EvaluateUtils;
 import ss.com.qqdemo.view.MainContentLineayLayout;
+import ss.com.qqdemo.view.SwipeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView(){
         final ListView leftContentListView = (ListView) findViewById(R.id.leftContentList);
-        final ListView mainContentListView = (ListView) findViewById(R.id.mainContentList);
         final ImageView contentHead = (ImageView) findViewById(R.id.mainHead);
         final ImageView leftHead = (ImageView) findViewById(R.id.leftHead);
         maincontentlilayout = (MainContentLineayLayout) findViewById(R.id.maincontentlilayout);
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 ViewHelper.setAlpha(contentHead, EvaluateUtils.evaluate(percent, 1.0f, 0.0f));
             }
         });
-        leftContentListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, new String[]{"QQ会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "联系人"}) {
+        leftContentListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, new String[]{"QQ会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "朋友圈", "联系人"}) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView v = (TextView) super.getView(position, convertView, parent);
@@ -77,13 +78,44 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                    case 6:
+                    case 6: //联系人
                         Intent intent = new Intent(MainActivity.this, PersonContactActivity.class);
                         startActivity(intent);
+                        break;
+                    case 5://朋友圈
+                        Intent intentFriC = new Intent(MainActivity.this, FriendsCircleActivity.class);
+                        startActivity(intentFriC);
                         break;
                 }
             }
         });
-        mainContentListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, new String[]{"QQ会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件"}));
+        SwipeLayout maincontentlilayout = (SwipeLayout) findViewById(R.id.maincontentlilayout);
+        maincontentlilayout.setOnSwipeLayoutStatusListener(new SwipeLayout.OnSwipeLayoutStatusListener() {
+
+            @Override
+            public void onClose(SwipeLayout swipeLayout) {
+
+            }
+
+            @Override
+            public void onOpen(SwipeLayout swipeLayout) {
+
+            }
+
+            @Override
+            public void onDraging(SwipeLayout swipeLayout) {
+
+            }
+
+            @Override
+            public void onStartClose(SwipeLayout swipeLayout) {
+
+            }
+
+            @Override
+            public void onStartOpen(SwipeLayout swipeLayout) {
+
+            }
+        });
     }
 }

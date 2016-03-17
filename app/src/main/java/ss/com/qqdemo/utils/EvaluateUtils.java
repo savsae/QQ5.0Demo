@@ -17,4 +17,10 @@ public class EvaluateUtils {
         return argbEvaluator.evaluate(percent,startValue,endValue);
     }
 
+    //int 估值器
+    public static Integer evaluateInt(float percent,Integer startValue,Integer endValue){
+        int startInt = startValue;
+        return (int)(startInt + percent * (endValue - startInt));
+    }
+
 }

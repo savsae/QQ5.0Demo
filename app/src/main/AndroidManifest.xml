@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".personcontact.PersonContactActivity"></activity>
+        <activity android:name=".personcontact.PersonContactActivity" />
+        <activity android:name=".friendscircle.FriendsCircleActivity"></activity>
     </application>
 
 </manifest>
